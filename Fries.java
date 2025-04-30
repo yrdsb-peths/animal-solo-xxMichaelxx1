@@ -15,6 +15,16 @@ public class Fries extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(), getY() + 1);
+        int x = getX();
+        int y = getY() + 2;
+        setLocation(x, y);
+        
+        // Remove fries and draw game over when fries gets to the bottom of the world
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }
