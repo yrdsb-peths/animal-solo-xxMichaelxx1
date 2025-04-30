@@ -25,6 +25,19 @@ public class Elephant extends Actor
         }
         
         // Remove fries if elephant eats it
-        removeTouching(Fries.class);
+        eat();
+    }
+    
+    /**
+     * Eat the fries and spawn new fries if a fries is eaten
+     */
+    public void eat()
+    {
+        if(isTouching(Fries.class))
+        {
+            removeTouching(Fries.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createFries();
+        }
     }
 }
