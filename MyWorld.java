@@ -12,7 +12,17 @@ public class MyWorld extends World {
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 200);
         
+        createFries();
+    }
+    
+    /**
+     * Create a new fries at random location at top of screen
+     */
+    public void createFries()
+    {
         Fries fries = new Fries();
-        addObject(fries, 300, 0);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(fries, x, y);
     }
 }
