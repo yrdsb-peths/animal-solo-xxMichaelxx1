@@ -40,17 +40,17 @@ public class TitleScreen extends World
      */
     private void prepare()
     {
+        addObject(titleLabel,300,100);
+        titleLabel.setLocation(300,150);
         Elephant elephant = new Elephant();
-        addObject(elephant,374,133);
-        elephant.setLocation(487,136);
+        addObject(elephant,300,100);
+        elephant.setLocation(530,100);
         Label label = new Label("Press <space> to Start", 40);
         addObject(label,286,252);
         label.setLocation(290,269);
         label.setLocation(286,290);
         Label label2 = new Label("Use \u2190 and \u2192 to Move", 40);
         addObject(label2,295,251);
-        label2.setLocation(358,233);
-        label2.setLocation(324,240);
-        label2.setLocation(343,245);
+        
     }
 }
